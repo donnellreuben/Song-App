@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get "/songs" => "songs#index"             #1. GET /songs.json
-  get "/one-song" => "songs#first_song"     #2. GET /one-song.json
-  post  "/songs" => "songs#create"          #3. POST /songs edit them wil body (form) HTTPie
-  get "/songs/:id" => "songs#show"          #4. GET /songs/id#.json 
-  patch "/songs/:id" => "songs#update"      #5. PATCH /songs/:id#.json do same as #3
-  delete "/songs/:id" => "songs#destroy"    #6. DELETE /songs/:id#.json delete a song
+  # get "/songs" => "songs#index"             #1. GET /songs.json
+  # get "/one-song" => "songs#first_song"     #2. GET /one-song.json
+  # post  "/songs" => "songs#create"          #3. POST /songs edit them wil body (form) HTTPie
+  # get "/songs/:id" => "songs#show"          #4. GET /songs/id#.json 
+  # patch "/songs/:id" => "songs#update"      #5. PATCH /songs/:id#.json do same as #3
+  # delete "/songs/:id" => "songs#destroy"    #6. DELETE /songs/:id#.json delete a song
+  resources :songs
 end
 
 
